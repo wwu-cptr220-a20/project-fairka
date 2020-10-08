@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Kaden Fairchild">
-    <meta name="description" content="Top100Monthly">
-    <title>Stage 0</title>
+    <meta name="description" content="Top100Monthly, songs, gyaxo">
+    <title>Gyaxo-Home</title>
 
-    
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
-<body>
-    <main>
-    <h1>Top 100 Songs of Each Month</h1>
-<section>
-    <h2>Topic Overview</h2>
-    <p>My idea for this project is to create a web application that provides the top 100 songs in an album for each month since 1990. It will draw information from the <a href="https://www.npmjs.com/package/billboard-top-100" target= "_blank">top 100 billboards API</a>
-        based on the month you chose. It will then generate an album for you to listen to based on that months top 100 songs. Within the application you are given the options to:
-        <li>Skip</li>
-        <li>Select specific songs</li>
-        <li>Select specific timings in the song</li>
-        <li>See how many listens it has</li>
-    </p>
-    <p>This project is inspired by the terrible music made today. Sometimes I want to go back to 2011 and listen to the top songs from that year. And with this web application it will allow me 
-        to listen to past songs with ease as if I were on <a href="https://www.spotify.com/us/" target = "_blank">spotify</a>. <a href="https://www.billboard.com/charts/hot-100">Billboard</a> has a way to see the top 100 songs but doesnt have a way to play the song directly from the website. So with this
-        application I have in mind. We would be able to get the top 100 songs of each month and play them directly from the source.  
-    </p>
-</section>
-<section>
-    <h2>Potential Applications</h2>
+<header>
     <ul>
-    <li>Spotify Type App</li>
-    <ul>
-        <li>This would be an app where you look up the date and can listen to music from the past. This can be usefull for people looking for songs that they might remember and to get a blast from the past.</li>
+        <li><a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Details</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#App">App</a></li>
     </ul>
-    <li>Guessing Game App</li>
-    <ul>
-        <li>I think a guessing game based on the past top 100 charts would be fun. It can keep score and will give you a random month and year with options of songs to chose from.</li>
-    </ul> 
-</ul>
-</section>
-</main>
+</header>
 
-<footer>
-    <p>Author: Kaden Fairchild</p>
-    <p>Stage 0 </p>
-</footer>
+<body>
+        <h1> Gyaxo <img src="img/headphones-690685_960_720.webp" alt="headphone pic"></h1>
+        <div class="searchBoxIndex" role="search">
+            <input type="text" placeholder="Year,Month">
+            <button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button>
+        </div>
+        <div class="sec1">
+            <section>
+
+                <h1>What is Gyaxo?</h1>
+
+                <p>Gyaxo is a song library filled with all the top 100 songs from each month from 1990-present day. The
+                    songs are drawn from the <a href="https://www.npmjs.com/package/billboard-top-100"
+                        target="_blank">top
+                        100 billboards API</a>
+                    based on the month you chose. Gyaxo also has the capibility to stream music straight to your
+                    computer from your selected month you chose.
+            </section>
+        </div>
+
+
+        <img class="img2" src="img/photo-1496293455970-f8581aae0e3b.jpg" alt="record player">
+
+        </p>
+        <div class="lists">
+            <h1>Gyaxo Features</h1>
+            <p>
+                <li>Skip</li>
+                <li>Select specific songs</li>
+                <li>Select a specific time within the song</li>
+                <li>See the number of listens</li>
+            </p>
+        </div>
+
+        <div class="Howto">
+            <h1>How to use Gyaxo </h1>
+            <p>To use Gyaxo simply put in the ["Year,Month"] into the search box.</p>
+        </div>
+
+        <div class="app" id="App">
+            <p>Future App</p>   
+        </div>
+    <footer>
+        <p class="pfooter">Author: <a href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
+    </footer>
 </body>
+
 </html>
