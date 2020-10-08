@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: 'Open Sans', sans-serif;
     padding-left: .1em;
@@ -19,4 +20,198 @@ section{
 footer{
     padding-top: 1rem;
     font-size: 80%;
+=======
+html{
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-left: .1em;
+    background: #171717 ;
+    display: block;
+    font-weight: 200;
+    margin: auto;
+    
+}
+
+.app{
+    width: 90%;
+    height: 500px;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 25px;
+    background-color: gray;
+    color: black;
+    display: block;
+    
+    float: left;
+}
+
+h1 {
+    padding-top: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    color: red;
+    font-size: 1.5rem;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 43px;
+}
+
+.pfooter{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 17px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
+}
+.lists{
+    float: left;
+    font-size: 1.5rem;
+}
+
+
+.Howto{
+    align-content: center;
+    font-size: 1.5rem;
+    float: left;
+}
+
+.Howto p{
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 43px;
+    color: white;
+}
+
+h1 img{
+    contain: content;
+    font-size: .5rem;
+    float: right;
+    height: 50%;
+    width: 50%;
+}
+.img2{
+    float: left;
+    
+}
+
+section{
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section a{
+    text-decoration: none;
+    color: gray;
+}
+
+section img{
+    float: right;
+    padding-right: 15rem;
+}
+
+
+footer{
+    padding: .5rem;
+    color: black;
+    text-align: center;
+    background-color: tomato;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    font-size: 17px;
+    
+}
+footer a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+.logo{
+    background-image: url("../img/680f934702c0daef6b73849394c67ca8.png");
+    padding-left: 1em;
+    padding-right: 1em;
+    left: true;
+    contain: content;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #171717;
+    padding-left: .75rem;
+    left: 0;
+    margin-right: 1rem;
+}
+header li{
+    text-decoration: none;
+    display: inline;
+    margin-right: 1rem;
+    
+}
+.lists li{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 43px;
+    color: white;
+}
+
+header li a{
+    color:white;
+    text-decoration: none;
+    display: inline;
+    margin-right: .8rem;
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 150%;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    padding-top: .5rem;
+    display: inline-block;
+}
+.searchBox{
+    float: right;
+}
+.searchBoxIndex{
+    float: left;
+}
+.searchBoxIndex input{
+    height: 2rem;
+    font-size: 1rem;
+    padding: .5rem;
+    vertical-align: bottom;
+}
+.searchBox input{
+    height: 2rem;
+    font-size: 1rem;
+    padding: .5rem;
+    vertical-align: bottom;
+}
+button{
+    height: 3.1rem;
+    width: 3rem;
+    margin-right: .10rem;
+>>>>>>> master
 }
