@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-body {
-    font-family: 'Open Sans', sans-serif;
-    padding-left: .1em;
-}
 
-h1 {
-    font-family: 'Encode Sans', sans-serif;
-    color: blue;
-    font-size: 1.5rem;
-    
-}
-
-section{
-    font-size: 1rem;
-    color: lightseagreen;
-}
-
-
-footer{
-    padding-top: 1rem;
-    font-size: 80%;
-=======
 html{
     position: relative;
     min-height: 100%;
