@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Kaden Fairchild">
     <meta name="description" content="GyaxoAbout">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
 
 
@@ -14,26 +15,37 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
-<body>
-<header>
-    <ul>
-        <li><a href="#"><span class="logo" aria-hidden="logo">&nbsp;</span></a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="info.html">Details</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#App">App</a></li>
-    </ul>
 
-    <div class="searchBox" role="search">
-        <input type="text" placeholder="Year,Month">
-        <button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button>
+    <div class="topnav" id="myTopnav">
+        <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
+        <a href="index.html">Home</a>
+        <a href="info.html">Details</a>
+        <a href="about.html">About</a>
+        <a href="index.html#App">App</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a class="searchBox" role="search">
+            <input type="text" placeholder="Year,Month">
+            <button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button></a>
     </div>
-</header>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 
-
+    
+<body>
     <main>
         <h1>About Us</h1>
         <section>
+            <div class="about">
             <img src="img\photo_networking-people-at-work-event.jpg" alt="coworkers">
             <p>This project is inspired by the terrible music made today. Sometimes I want to go back to 2011 and listen
                 to the top songs from that year. And with this web application it will allow me
@@ -46,13 +58,15 @@
             </p>
             <h1>Who Are We? </h1>
             <p> There is currently one person working on Gyaxo</p>
-
+        </div>
         </section>
     </main>
 
-<footer>
-    <p class="pfooter">Author: <a href="https://github.com/fairka">Kaden Fairchild</a></p>
-</footer>
+    <body class="footer">
+        
+        <main class="footer-content"></main>
+        <footer><p>Author: <a href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p></footer>
+      </body>
 </body>
 
 </html>
