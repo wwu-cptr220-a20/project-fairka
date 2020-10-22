@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 <div class="topnav" id="myTopnav">
     <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
@@ -37,12 +39,18 @@
     }
 </script>
 
-<body>
-    <h1> Gyaxo </h1>
+<body role=document>
+
+    <h1 id="title"> Gyaxo </h1>
+    <div class="div4">
+        <p>Search bar Only</p>
+            <button class="play" role=button id="searchonly"><i class='fa fa-search'></i></button>
+    </div>
     <h2>
         <div class="searchBoxIndex" role="search">
-            <input type="text" placeholder="Year,Month">
-            <button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button>
+            <input type="date">
+            <button role=button aria-label="search"><i aria-label="search"
+                    class="fas fa-search fa-flip-horizontal"></i></button>
         </div>
     </h2>
     <h3>
@@ -51,9 +59,9 @@
             <p>To use Gyaxo simply put in the ["Year,Month"] into the search box.</p>
         </div>
     </h3>
-    <h4><img src="img/headphones-690685_960_720.webp" alt="headphone pic"></h4>
+    <h4><img role=img src="img/headphones-690685_960_720.webp" alt="headphone pic"></h4>
 
-    <section class="section1">
+    <section role=region class="section1">
         <div class="div2">
 
             <div class="card1">
@@ -80,17 +88,19 @@
         </div>
         <div class="div3">
             <div class=playBar>
-                <button class="play"><i class='fas fa-random'></i></button>
-                <button class="play"><i class='fas fa-step-backward'></i></button>
-                <button class="play"><i class='fas fa-play'></i></button>
-                <button class="play"><i class='fas fa-step-forward'></i></button>
-                <button class="play"><i class='fas fa-redo'></i></button>
-
+                <button class="play" role=button><i class='fas fa-random'></i></button>
+                <button class="play" id="back" role=button><i class='fas fa-step-backward'></i></button>
+                <button class="play" id="button" role=button><i id="playbtn" class='fas fa-play'></i></button>
+                <button class="play" id="skip" role=button><i class='fas fa-step-forward'></i></button>
+                <button class="play" role=button><i class='fas fa-redo'></i></button>
             </div>
         </div>
+        <audio id="player">
+            <source src='music\in love with a ghost.mp3' type='audio/mpeg'>
+        </audio>
     </section>
 
-    <h5><img src="img/photo-1496293455970-f8581aae0e3b.jpg" alt="record player"></h5>
+    <h5><img role=img id="thmbnail" src="img/flowers.jpg" alt="thumb"></h5>
 
 
 
@@ -101,14 +111,14 @@
         <p>Future App</p>
     </div>
 
-    <body class="footer">
+    <body role=document class="footer">
 
         <main class="footer-content"></main>
         <footer>
-            <p>Author: <a href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
+            <p>Author: <a role=link href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
         </footer>
     </body>
-
+    <script src="js/index.js"></script>
 </body>
 
 </html>

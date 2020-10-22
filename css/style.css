@@ -68,13 +68,16 @@ footer a{
 #social-links{
     display:none;
 }
+
 h1 {
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    color: red;
+    color:red;
     text-align: center;
     font-size: 2rem;
     line-height: 15px;
+
 }
+
 h2{
     height: 15px;
     padding-bottom: .1rem;
@@ -171,6 +174,22 @@ h5 img{
     text-align: center;
     color:red;
 }
+.div4{
+    flex-wrap: wrap;
+    justify-content: center;
+    display:flex;
+    transition-duration: 1s;
+}
+.div4 p{
+    color: white;
+    font-size: 17px;
+}
+.div4 i{
+    padding: .25rem;
+    text-align: center;
+    color:red;
+}
+
 .div2 p{
     padding:.5rem 1rem;
 }
@@ -251,6 +270,7 @@ footer{
 }
 .play{
     font-size:24px;
+    cursor: pointer;
     padding: 0;
     border: none;
     background: none;
