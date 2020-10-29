@@ -24,20 +24,11 @@
     <a href="info.html">Details</a>
     <a href="about.html">About</a>
     <a href="index.html#App">App</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a class="icon">
         <i class="fa fa-bars"></i>
     </a>
 </div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
+
 
 <body role=document>
 
@@ -46,19 +37,23 @@
         <p>Search bar Only</p>
             <button class="play" role=button id="searchonly"><i class='fa fa-search'></i></button>
     </div>
-    <h2>
+    <form class="form-inline" method="GET" action="https://itunes.apple.com/search">
         <div class="searchBoxIndex" role="search">
-            <input type="date">
-            <button role=button aria-label="search"><i aria-label="search"
+            <input  type="text" id="searchQuery" name="term" placeholder="Song Name...">
+            <button type="submit" id="top100" role=button aria-label="search"><i aria-label="search"
                     class="fas fa-search fa-flip-horizontal"></i></button>
         </div>
-    </h2>
-    <h3>
+    </form>
+        <h3>
         <div class="Howto">
             <h1>How to use Gyaxo </h1>
-            <p>To use Gyaxo simply put in the ["Year,Month"] into the search box.</p>
+            <p>To use Gyaxo simply put in the title of the song you want into the search box.</p>
         </div>
     </h3>
+    <div id="div100">
+    </div>
+    
+    
     <h4><img role=img src="img/headphones-690685_960_720.webp" alt="headphone pic"></h4>
 
     <section role=region class="section1">
@@ -118,6 +113,11 @@
             <p>Author: <a role=link href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
         </footer>
     </body>
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js%22%3E"></script>
     <script src="js/index.js"></script>
 </body>
 
