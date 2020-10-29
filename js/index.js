@@ -7,7 +7,7 @@ var back = document.getElementById("back")
 var audio = document.getElementById("player");
 var tn = document.getElementById("thmbnail");
 
-button.addEventListener("click", function () {
+button.addEventListener("click", function () { 
   if (audio.paused) {
     audio.play();
     document.getElementById("playbtn").className = "fas fa-pause";
@@ -44,27 +44,27 @@ searchonly.addEventListener("click", function () {
 });
 
 
-const background = document.querySelector("body");
-
-background.addEventListener("mousemove", (p) => {
-  background.style.backgroundPositionX = -p.offsetX + "px";
-});
-
+//THIS IS THE START OF THE SEARCH BAR AND FUNCTIONALITY OF GYAXO
 /////////////////////////////////
 ////////////////////////////////
 var div100 = document.querySelector("#div100");
 function renderTrack(song) {
-  var track = document.createElement("img");
+  var track = document.createElement("img");//renders song img
+  var grade = document.createElement("div");
+  grade.className = "box";
   track.src = song.artworkUrl100;
   track.alt = song.trackName;
   track.title = song.trackName;
   track.addEventListener("click", function () {
     playTrackPreview(song, track)
   });
-  div100.appendChild(track);
+  grade.appendChild(track);
+  div100.appendChild(grade);
+ 
+
 }
 
-function renderSearch(obj) {
+function renderSearch(obj) {//renders search while clearing old and adding error check
   while (div100.firstChild) {
     div100.removeChild(div100.firstChild);
   }
@@ -79,9 +79,9 @@ function renderSearch(obj) {
 }
 
 
-const URL_TEMPLATE = "https://itunes.apple.com/search?entity=song&limit=25&term=";
+const URL_TEMPLATE = "https://itunes.apple.com/search?entity=song&limit=1000&term=";
 
-function fetchTop100(search) {
+function fetchTop100(search) {//gets 25 songs from search
 
   var promise = fetch(URL_TEMPLATE + search)
     .then((response => {
@@ -93,20 +93,27 @@ function fetchTop100(search) {
   return promise
 }
 
-var top100 = document.getElementById("top100")
+var top100 = document.getElementById("top100") //adds an event listner for the button and gets rid of excess eye candy 
 top100.addEventListener("click", function (event) {
   fetchTop100(document.querySelector('#searchQuery').value);
-  event.preventDefault();
+  
   document.querySelector("h3").style.display = "none";
+  document.querySelector("h4").style.display = "none";
+  document.querySelector("section").style.display = "none";
+  document.querySelector("h5").style.display = "none";
+  document.getElementById("App").style.display = "none";
+  event.preventDefault();
 });
 
-function renderError(error) {
+function renderError(error) {//renders the error to the div100 div
   var object = document.createElement('p');
   object.classList.add("alert");
   object.classList.add("alert-danger");
   object.textContent = error.message;
   div100.append(object);
 }
+
+    
 
 const state = { previewAudio: new Audio() };
 

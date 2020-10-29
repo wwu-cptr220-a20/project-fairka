@@ -35,5 +35,9 @@
         "error"
       ]
     }
+  },
+  "dependencies": {
+    "grade-js": "^1.0.10",
+    "howler": "^2.2.1"
   }
 }
