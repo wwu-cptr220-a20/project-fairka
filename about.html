@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
-
+<body>
     <div class="topnav" id="myTopnav">
         <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
         <a href="index.html">Home</a>
@@ -27,7 +27,11 @@
         </a>
         <a class="searchBox" role="search">
             <input type="date">
-            <button  role=button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button></a>
+            <button  role="button" aria-label="search">
+                <i aria-label="search" class="fas fa-search fa-flip-horizontal">
+                </i>
+            </button>
+        </a>
     </div>
     <script>
         function myFunction() {
@@ -38,15 +42,12 @@
             x.className = "topnav";
           }
         }
-        </script>
-
-    
-<body>
+    </script>
     <main>
         <h1>About Us</h1>
         <section>
             <div class="about">
-            <img role=img src="img\photo_networking-people-at-work-event.jpg" alt="coworkers">
+            <img role="img" src="img\photo_networking-people-at-work-event.jpg" alt="coworkers">
             <p>This project is inspired by the terrible music made today. Sometimes I want to go back to 2011 and listen
                 to the top songs from that year. And with this web application it will allow me
                 to listen to past songs with ease as if I were on <a href="https://www.spotify.com/us/"
@@ -63,10 +64,12 @@
     </main>
 
     <body class="footer">
-        
         <main class="footer-content"></main>
-        <footer><p>Author: <a href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p></footer>
-      </body>
+        <footer>
+            <p>Author: <a href="https://github.com/fairka" target="_blank" rel="noreferrer">Kaden Fairchild</a>
+            </p>
+        </footer>
+    </body>
 </body>
 
 </html>

@@ -14,31 +14,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
-<div class="topnav" id="myTopnav">
-    <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
-    <a href="index.html">Home</a>
-    <a href="info.html">Details</a>
-    <a href="about.html">About</a>
-    <a href="index.html#App">App</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-    <a class="searchBox" role="search">
-        <input type="date">
-        <button role=button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button></a>
-</div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
-
 <body>
+    <div class="topnav" id="myTopnav">
+        <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
+        <a href="index.html">Home</a>
+        <a href="info.html">Details</a>
+        <a href="about.html">About</a>
+        <a href="index.html#App">App</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a class="searchBox" role="search">
+            <input type="date">
+            <button role="button" aria-label="search">
+                <i aria-label="search" class="fas fa-search fa-flip-horizontal">
+                </i>
+            </button>
+        </a>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
     <main>
         <section>
             <div class="info">
@@ -57,22 +60,16 @@
                     <ul>
                         <li>I think a guessing game based on the past top 100 charts would be fun. It can keep score and
                             will give you a random month and year with options of songs to chose from.</li>
-                            
                     </ul>
                 </ul>
-                
             </div>
         </section>
-        
     </main>
-
     <body class="footer">
-
         <main class="footer-content"></main>
         <footer>
-            <p>Author: <a href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
+            <p>Author: <a href="https://github.com/fairka" target="_blank" rel="noreferrer">Kaden Fairchild</a></p>
         </footer>
     </body>
 </body>
-
 </html>
