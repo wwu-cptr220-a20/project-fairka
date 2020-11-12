@@ -18,29 +18,29 @@
 
 
 </head>
-<div class="topnav" id="myTopnav">
-    <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
-    <a href="index.html">Home</a>
-    <a href="info.html">Details</a>
-    <a href="about.html">About</a>
-    <a href="index.html#App">App</a>
-    <a class="icon">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-
-
-<body role=document>
-
+<body role="document">
+    <div class="topnav" id="myTopnav">
+        <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
+        <a href="index.html">Home</a>
+        <a href="info.html">Details</a>
+        <a href="about.html">About</a>
+        <a href="index.html#App">App</a>
+        <a class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
     <h1 id="title"> Gyaxo </h1>
     <div class="div4">
         <p>Search bar Only</p>
-            <button class="play" role=button id="searchonly"><i class='fa fa-search'></i></button>
+            <button class="play" role="button" id="searchonly">
+                <i class="fa fa-search">
+                </i>
+            </button>
     </div>
     <form class="form-inline" method="GET" action="https://itunes.apple.com/search">
         <div class="searchBoxIndex" role="search">
             <input  type="text" id="searchQuery" name="term" placeholder="Song Name...">
-            <button type="submit" id="top100" role=button aria-label="search"><i aria-label="search"
+            <button type="submit" id="top100" role="button" aria-label="search"><i aria-label="search"
                     class="fas fa-search fa-flip-horizontal"></i></button>
         </div>
     </form>
@@ -51,27 +51,26 @@
         </div>
     </h3>
     <div class="container" id="div100">
+<<<<<<< HEAD
         
+=======
+>>>>>>> f29e3c990baaebf66c7e5caa155c6997ebef5c35
     </div>
     <script src="https://unpkg.com/grade-js/docs/dist/grade.js"></script>
-<script type="text/javascript">
-    window.addEventListener('load', function(){
-         
-        Grade(document.querySelectorAll('.box'))
-    })
-</script>
-    
-    
-    <h4><img role=img src="img/headphones-690685_960_720.webp" alt="headphone pic"></h4>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
 
-    <section role=region class="section1">
+            Grade(document.querySelectorAll('.box'))
+        })
+    </script>
+    <h4><img role="img" src="img/headphones-690685_960_720.webp" alt="headphone pic"></h4>
+    <section role="region" class="section1">
         <div class="div2">
-
             <div class="card1">
                 <h1>What is Gyaxo?</h1>
                 <p>Gyaxo is a song library filled with all the top 100 songs from each month from 1990-present day. The
                     songs are drawn from the <a href="https://www.npmjs.com/package/billboard-top-100"
-                        target="_blank">top
+                        target="_blank" rel="noreferrer">top
                         100 billboards API</a>
                     based on the month you chose. Gyaxo also has the capibility to stream music straight to your
                     computer from your selected month you chose.</p>
@@ -87,45 +86,50 @@
                     </p>
                 </div>
             </div>
-
         </div>
         <div class="div3">
-            <div class=playBar>
-                <button class="play" role=button><i class='fas fa-random'></i></button>
-                <button class="play" id="back" role=button><i class='fas fa-step-backward'></i></button>
-                <button class="play" id="button" role=button><i id="playbtn" class='fas fa-play'></i></button>
-                <button class="play" id="skip" role=button><i class='fas fa-step-forward'></i></button>
-                <button class="play" role=button><i class='fas fa-redo'></i></button>
+            <div class="playBar">
+                <button class="play" role="button">
+                    <i class="fas fa-random">
+                    </i>
+                </button>
+                <button class="play" id="back" role="button">
+                    <i class="fas fa-step-backward">
+                    </i>
+                </button>
+                <button class="play" id="button" role="button">
+                    <i id="playbtn" class="fas fa-play">
+                    </i>
+                </button>
+                <button class="play" id="skip" role="button">
+                    <i class="fas fa-step-forward">
+                    </i>
+                </button>
+                <button class="play" role="button">
+                    <i class="fas fa-redo">
+                    </i>
+                </button>
             </div>
         </div>
         <audio id="player">
-            <source src='music\in love with a ghost.mp3' type='audio/mpeg'>
+            <source src="music\in love with a ghost.mp3" type="audio/mpeg">
         </audio>
     </section>
-
-    <h5><img role=img id="thmbnail" src="img/flowers.jpg" alt="thumb"></h5>
-
-
-
-
+    <h5>
+        <img role="img" id="thmbnail" src="img/flowers.jpg" alt="thumb">
+    </h5>
     <div class="app" id="App">
         <p>Future App</p>
     </div>
-
-    <body role=document class="footer">
-
+    <body role="document" class="footer">
         <main class="footer-content"></main>
         <footer>
-            <p>Author: <a role=link href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
+            <p>Author: <a role="link" href="https://github.com/fairka" target="_blank" rel="noreferrer">Kaden Fairchild</a></p>
         </footer>
     </body>
-    
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js%22%3E"></script>
     <script src="js/index.js"></script>
-    
 </body>
-
 </html>
