@@ -1,0 +1,62 @@
+
+#survey-form {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+  }
+  
+  @media (min-width: 560px) {
+    #cont {
+      max-width: 700px;
+  }
+  }
+  
+  .age{
+      position: relative;
+      left:44%;
+      align-content: center;
+      text-align: center;
+  }
+  #info-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .form-cntr {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .form-cntr1 {
+    border: 0px;
+    height: 15px;
+    width: 20px;
+  }
+  #inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  #inputGroup input {
+    margin: 0 45px 20px 0;
+  }
+  p {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  #button {
+    text-align: center;
+  }
+  #submit {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    width: 15%;
+    font-size: 20px;
+    margin: 0 auto;
+  }

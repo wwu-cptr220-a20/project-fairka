@@ -9,70 +9,89 @@
     <title>Info</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/survey.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 </head>
-<div class="topnav" id="myTopnav">
-    <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
-    <a href="index.html">Home</a>
-    <a href="info.html">Details</a>
-    <a href="about.html">About</a>
-    <a href="index.html#App">App</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-    <a class="searchBox" role="search">
-        <input type="date">
-        <button role=button aria-label="search"><i aria-label="search" class="fas fa-search fa-flip-horizontal"></i></button></a>
-</div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
 
 <body>
-    <main>
-        <section>
-            <div class="info">
-                <h1>Potential Applications</h1>
-                <ul>
-                    <li>Spotify Inspired App</li>
-                    <ul>
-                        <li>This would be an app where you look up the date and can listen to music from the past. This
-                            can be usefull for people looking for songs that they might remember and to get a blast from
-                            the past. The app would instantly stream music and has the capibility to create albums and
-                            save
-                            songs.
-                        </li>
-                    </ul>
-                    <li>Guessing Game App</li>
-                    <ul>
-                        <li>I think a guessing game based on the past top 100 charts would be fun. It can keep score and
-                            will give you a random month and year with options of songs to chose from.</li>
-                            
-                    </ul>
-                </ul>
-                
+    <div class="topnav" id="myTopnav">
+        <a href="#"><span class="logo" aria-hidden="logo"> &nbsp;</span></a></li>
+        <a href="index.html">Home</a>
+        <a href="info.html">Details</a>
+        <a href="about.html">About</a>
+        <a href="index.html#App">App</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a class="searchBox" role="search">
+            <input type="date">
+            <button role=button aria-label="search"><i aria-label="search"
+                    class="fas fa-search fa-flip-horizontal"></i></button></a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <!--           Guessing page            -->
+    <h1 class="Gyuser">Music Survey</h1>
+    
+        <form id="survey-form">
+            <div class="age" id="info-group">
+
+                <label id="number-label" for="age">Whats your age</label>
+                <input class="form-cntr" type="number" name="age" id="number" placeholder="Age" min="10" max="99">
             </div>
-        </section>
-        
-    </main>
 
-    <body class="footer">
+            <div id="favMusic">
+                <p>Select Your Favorite Types of Music:</p>
+                <div id="inputGroup">
+                    <label><input id="pop" class="form-cntr1" type="checkbox" name="musictype" value="pop">Pop</label>
 
-        <main class="footer-content"></main>
-        <footer>
-            <p>Author: <a href="https://github.com/fairka" target="_blank">Kaden Fairchild</a></p>
-        </footer>
-    </body>
+                    <label><input id="classic" class="form-cntr1" type="checkbox" name="musictype"
+                            value="classic">Classical</label>
+
+                    <label><input id="rock" class="form-cntr1" type="checkbox" name="musictype"
+                            value="rock">Rock</label>
+
+                    <label><input id="folk" class="form-cntr1" type="checkbox" name="musictype"
+                            value="folk">Folk</label>
+
+                    <label><input id="rap" class="form-cntr1" type="checkbox" name="musictype" value="rap">Rap</label>
+
+                </div>
+            </div>
+            
+            <div id="button">
+                <input id="submit" class="subButton" type="submit" name="submit" value="submit" />
+            </div>
+        </form>
+    </div>
+    <div id="GenreResults">
+
+    </div>
+
+
+
+
+
+
 </body>
 
+
+<link href="https://surveyjs.azureedge.net/1.8.12/modern.css" type="text/css" rel="stylesheet" />
+<script src="https://surveyjs.azureedge.net/1.8.12/survey.jquery.min.js"></script>
+<script src="js/index.js"></script>
 </html>

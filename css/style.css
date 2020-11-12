@@ -9,7 +9,6 @@ html{
   margin-bottom: 1.5em;
   align-items: center;
   justify-content: center;
-
 }
 #div100 p{
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
@@ -235,17 +234,8 @@ h5 img{
 .div2 p{
     padding:.5rem 1rem;
 }
-.info{
-    
-    text-align: center;
-}
-.info ul{
-    list-style-position: inside;
-    text-align: center;
-}
-.info img{
-    text-align: center;
-}
+
+
 .card1{
     flex: 0 0 250px;
     align-items: flex-start;
