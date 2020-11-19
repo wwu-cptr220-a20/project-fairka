@@ -114,9 +114,9 @@ describe('Render functions', () => {
     
     setImmediate(() => { //wait until promise has resolved (one tick)
      expect(fetchMock.lastCall()[0]).toMatch(/.*term=TestSearch/); //was called with correct url
-      let records = $('#records img');
-      expect(records.length).toBe(1); //only one record returned.
-      expect(records.eq(1).attr('src')).toEqual(searchResult.artworkUrl100); //shows right image
+      let div100 = $('#div100 img');
+      expect(div100.length).toBe(1); //only one record returned.
+      expect(div100.eq(1).attr('src')).toEqual(searchResult.artworkUrl100); //shows right image
       done(); //callback to continue tests
     })
   });
