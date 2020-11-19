@@ -42,6 +42,7 @@
     }
   },
   "dependencies": {
+    "billboard-top-100": "^2.5.9",
     "grade-js": "^1.0.10",
     "howler": "^2.2.1"
   }

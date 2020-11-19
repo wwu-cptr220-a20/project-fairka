@@ -27,10 +27,12 @@ var tn = document.getElementById("thmbnail");
 button.addEventListener("click", () => { 
   if (audio.paused) {
     audio.play();
-    document.getElementById("playbtn").className = "fas fa-pause";
+    document.getElementById("playbtn").classList.toggle("fas fa-pause");
+    document.getElementById("playbtn").classList.toggle("fas fa-play");
   } else {
     audio.pause();
-    document.getElementById("playbtn").className = "fas fa-play";
+    document.getElementById("playbtn").classList.toggle("fas fa-play");
+    document.getElementById("playbtn").classList.toggle("fas fa-pause");
   }
 });
 
@@ -214,3 +216,17 @@ function playTrackPreview(track, img) {
 //     }
 //   }
 // }
+
+if(typeof module !== 'undefined' && module.exports){
+  /* eslint-disable */
+  module.exports.EXAMPLE_SEARCH_RESULTS = EXAMPLE_SEARCH_RESULTS;
+  if(typeof renderTrack !== 'undefined') 
+    module.exports.renderTrack = renderTrack;
+  if(typeof renderSearchResults !== 'undefined') 
+    module.exports.renderSearchResults = renderSearchResults;
+  if(typeof fetchTrackList !== 'undefined') 
+    module.exports.fetchTrackList = fetchTrackList;
+  if(typeof toggleSpinner !== 'undefined') 
+    module.exports.toggleSpinner = toggleSpinner;
+  module.exports.playTrackPreview = playTrackPreview;    
+}
