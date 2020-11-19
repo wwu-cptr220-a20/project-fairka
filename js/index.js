@@ -159,64 +159,6 @@ function playTrackPreview(track, img) {
   }
 }
 
-
-
-////////////////Survey data
-
-// const Rock = {results:[ {Name: "AC/DC", artworkUrl: "https://exclaim.ca/images/acdc-logo.jpg" }, {Name: "Led Zeppelin", artworkUrl: "https://cdn-7.famouslogos.us/images/led-zeppelin-logo.jpg"}, {Name: "Aerosmith", artworkUrl: "https://i.pinimg.com/originals/05/e7/f4/05e7f4a0c92241a307729edad4d903c4.jpg"}, {Name:" Nirvana", artworkUrl: "https://merchbar.imgix.net/product/105/6519/4176053698642/SiDI5S3a37side-1.png?w=1280&h=1280&quality=60&auto=compress%252Cformat"}, {Name: "Queen", artworkUrl: "https://imgs.smoothradio.com/images/26964?crop=16_9&width=660&relax=1&signature=NVCgtyi1KSEvzRoufqfsYlI01LY="}, {Name: "Guns N' Roses" artworkUrl: "https://logos-world.net/wp-content/uploads/2020/04/Guns-N-Roses-Logo.png"}]};
-// const Rap =  {results:[ {Name: "Drake", artworkUrl: "https://cdn.vox-cdn.com/thumbor/NUX0Sfdb8V3xVviUIB3fgHM_ALw=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19858387/header_drake_red_carpet_DRAKEWATCH0120.jpg"}, {Name: "Kanye West", artworkUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0f/Kanye_West_at_the_2009_Tribeca_Film_Festival-2_%28cropped%29.jpg"}, {Name: "lil uzi vert" , artworkUrl: "https://media.pitchfork.com/photos/5f3d4c25ffb741673557a615/16:9/w_1600,h_900,c_limit/Lil-Uzi-Vert.jpg"}, {Name: "Travis Scott", artworkUrl: "https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200909094728-travis-scott-2019.jpg"}, 
-// const Pop = {results:[ {Name: "Beyonce" }, {Name: "Billie Eilish"}, {Name: "LadyGaga"}, {Name: "Ariana Grande"}, {Name: "Taylor Swift"}, {Name: "Post Malone"}]};
-// const Classical = {results:[ {Name: "Beethoven" , artworkUrl:}, {Name: "Bach", artworkUrl:}, {Name: "Debussy", artworkUrl:}, {Name: "Mozart", artworkUrl:}, {Name: "Brahms", artworkUrl:}, {Name: "Shubert", artworkUrl:}]};
-// const Folk = {results:[ {Name: "Bob Dylan", artworkUrl: }, {Name: "Judy Collins", artworkUrl:}, {Name: "Pete Seeger", artworkUrl:}, {Name: "Joni Mitchell", artworkUrl:}, {Name: "Woody Guthrie", artworkUrl:}, {Name: "Gordon Lightfoot", artworkUrl:}]};
-
-
-// function renderArtists(Genre) {
-//   var img = document.createElement("img");
-//   img.src = Genre.artworkUrl;
-//   img.alt = Genre.Name;
-//   img.title = Genre.Name;
-//   document.querySelector("#GenreResults").appendChild(img);
-// }
-
-
-// function checkCheckboxes(){
-// if(document.getElementById("pop").checked == true){
-// getSurveyResults(Pop);
-// } else if(document.getElementById("classic").checked == true){
-//   getSurveyResults(Classical);
-// } else if(document.getElementById("rock").checked == true){
-//   getSurveyResults(Rock);
-// } else if(document.getElementById("folk").checked == true){
-//   getSurveyResults(Folk);
-// } else if(document.getElementById("rap").checked == true){
-//   getSurveyResults(Rap);
-// } else {
-//    return;
-// }
-// }
-
-
-// var submitbtn = document.getElementsByClassName("#subbutton");
-// submitbtn.addEventListener('click', function (event){
-//   checkCheckboxes();
-//   event.preventDefault;
-// });
-
-
-// function getSurveyResults(obj){
-//   while (document.querySelector("#GenreResults").firstChild) {
-//     document.querySelector("#GenreResults").removeChild(document.querySelector("#GenreResults").firstChild);
-//   }
-  
-//   if (obj.results == "") {
-//     renderError(new Error("No results found"));
-//   } else {
-//     for (let i = 0; i < obj.results.length; i++) {
-//       renderArtists(obj.results[i]);
-//     }
-//   }
-// }
-
 if(typeof module !== 'undefined' && module.exports){
   /* eslint-disable */
   module.exports.EXAMPLE_SEARCH_RESULTS = EXAMPLE_SEARCH_RESULTS;
