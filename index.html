@@ -45,19 +45,13 @@
     </h1>
     <form class="form-inline" method="GET" action="https://itunes.apple.com/search">
         <div id="searchBoxIndex" class="form-group mr-3">
-            <input type="text" name="term" id="searchQuery" class="form-control">
+            <input type="text" name="term" id="searchQuery" class="form-control" placeholder="Ex: The Beatles">
         </div>
-        <button type="submit" class="btn btn-primary">
-            <i class="fa fa-music" aria-hidden="true"></i> Search!
+        <button type="submit" class="btn btn-dark">
+            <i class="fa fa-music" aria-hidden="true"></i> Search
         </button>
         <input type="hidden" name="entity" value="song"> <!-- extra form param -->
     </form>
-    <h2>
-        <div id="Howto">
-            <h1>How to use Gyaxo </h1>
-            <p>To use Gyaxo simply put in the title of the song or the artist you want into the search box.</p>
-        </div>
-    </h2>
     <div id="records">
     </div>
 
@@ -88,18 +82,18 @@
     <section role="region" class="section1">
         <div class="div2">
             <div class="card1">
-                <h1>What is Gyaxo?</h1>
+                <h1 class="cardTitle">What is Gyaxo?</h1>
                 <p>Gyaxo is a song playing app that lets users play songs of their favorite artist. There is even a
                     function to select a Genre and it will give you artists from that Genre</p>
             </div>
             <div class="card2">
                 <div class="lists">
-                    <h1>Gyaxo Features</h1>
-                    <p>
-                        <li>Skip</li>
-                        <li>Select specific songs</li>
-                        <li>Select a specific time within the song</li>
-                    </p>
+                    <h1 class="cardTitle">Gyaxo Features</h1>
+                    <ul>
+                        <li>Search for songs by artist or song name</li>
+                        <li>Preview songs</li>
+                        <li>Find songs based on artist recommendations</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -128,9 +122,6 @@
                 </button>
             </div>
         </div>
-        <audio id="player" controls>
-            <source src="./music/in_love_with_a_ghost.mp3" type="audio/mpeg">
-        </audio>
     </section>
     <h5>
         <img role="img" id="thmbnail" src="img/flowers.jpg" alt="thumb">
