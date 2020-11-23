@@ -53,83 +53,121 @@ back.addEventListener("click", function () {
   audio.play();
 });
 
-var searchonly = document.getElementById("searchonly");
-
-searchonly.addEventListener("click", function () {
-  document.querySelector("h4").style.display = "none";
-  document.querySelector("section").style.display = "none";
-  document.querySelector("h5").style.display = "none";
-  document.getElementById("App").style.display = "none";
-});
-
 
 //THIS IS THE START OF THE SEARCH BAR AND FUNCTIONALITY OF GYAXO
 /////////////////////////////////
 ////////////////////////////////
-var div100 = document.querySelector("#div100");
 function renderTrack(song) {
-  var track = document.createElement("img");//renders song img
-  var grade = document.createElement("div");
-  grade.className = "box";
+  let track = document.createElement('img');
+  let caption = document.createElement('div');
+  caption.classList.add('carousel-caption');
+  let trackName = document.createElement('h3');
+  let artistName = document.createElement('p');
+  trackName.classList.add('app');
+  artistName.classList.add('app');
+  let div = document.querySelector('.carousel-inner');
+  let newDiv = document.createElement('div');
+  newDiv.classList.add('carousel-item');
+  trackName.textContent = song.trackName;
+  artistName.textContent = song.artistName;
   track.src = song.artworkUrl100;
   track.alt = song.trackName;
-  track.title = song.trackName;
+  track.classList.add('d-block');
+  track.classList.add('w-70');
   track.addEventListener("click", function () {
     playTrackPreview(song, track)
   });
-  grade.appendChild(track);
-  div100.appendChild(grade);
- 
-
+  caption.appendChild(trackName);
+  caption.appendChild(artistName);
+  newDiv.appendChild(track);
+  newDiv.appendChild(caption);
+  div.appendChild(newDiv);
 }
 
-function renderSearch(obj) {//renders search while clearing old and adding error check
-  while (div100.firstChild) {
-    div100.removeChild(div100.firstChild);
-  }
-  if (obj.results == "") {
-    renderError(new Error("No results found"));
-  } else {
-    for (let i = 0; i < obj.results.length; i++) {
-      renderTrack(obj.results[i]);
+function renderTrack2(song) {
+  let track = document.createElement('img');
+  let caption = document.createElement('div');
+  caption.classList.add('carousel-caption');
+  let trackName = document.createElement('h3');
+  let artistName = document.createElement('p');
+  trackName.classList.add('app');
+  artistName.classList.add('app');
+  let div = document.querySelector('.carousel-inner');
+  let newDiv = document.createElement('div');
+  newDiv.classList.add('carousel-item');
+  newDiv.classList.add('active');
+  trackName.textContent = song.trackName;
+  artistName.textContent = song.artistName;
+  track.src = song.artworkUrl100;
+  track.alt = song.trackName;
+  track.classList.add('d-block');
+  track.classList.add('w-70');
+  track.addEventListener("click", function () {
+    playTrackPreview(song, track)
+  });
+  caption.appendChild(trackName);
+  caption.appendChild(artistName);
+  newDiv.appendChild(track);
+  newDiv.appendChild(caption);
+  div.appendChild(newDiv);
+}
 
+
+function renderSearchResults(listOfSongs) {
+  let records = document.querySelector('.carousel-inner');
+  while (records.firstChild) {
+    records.removeChild(records.firstChild);
+  }
+  if (listOfSongs.results == '') {
+    renderError(new Error("No results found"));
+  } 
+  else {
+    for (let i=0; i < listOfSongs.results.length; i++) {
+      if (i == 0) {
+        renderTrack2(listOfSongs.results[0]);
+      } else {
+      renderTrack(listOfSongs.results[i]);
+      }
     }
   }
 }
 
 
-const URL_TEMPLATE = "https://itunes.apple.com/search?entity=song&limit=25&term=";
 
-function fetchTop100(search) {//gets 25 songs from search
+function fetchTrackList(searchTerm) {
+  let URL_TEMPLATE = 'https://itunes.apple.com/search?entity=song&limit=25&term=' + searchTerm;
+  fetch(URL_TEMPLATE)  //start the download
+    .then(function(response) {  //when done downloading
+        let dataPromise = response.json();  //start encoding into an object
+        return dataPromise;  //hand this Promise up
+    })
+    .then(function(data) {  //when done encoding
+        //do something with the data!!
+        renderSearchResults(data); //will now be encoded as a JavaScript object!
+    })
+    .catch(renderError);
+} 
 
-  var promise = fetch(URL_TEMPLATE + search)
-    .then((response => {
-      return response.json()
-    }))
-    .then(renderSearch)
-    .catch(renderError)
+let searchButton = document.querySelector('button');
 
-  return promise
-}
-
-var top100 = document.getElementById("top100") //adds an event listner for the button and gets rid of excess eye candy 
-top100.addEventListener("click", function (event) {
-  fetchTop100(document.querySelector('#searchQuery').value);
-  
+searchButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  let search = document.querySelector('#searchQuery');
+  fetchTrackList(search.value);
   document.querySelector("h3").style.display = "none";
-  document.querySelector("h4").style.display = "none";
   document.querySelector("section").style.display = "none";
   document.querySelector("h5").style.display = "none";
-  document.getElementById("App").style.display = "none";
+  document.querySelector("h2").style.display ="none";
   event.preventDefault();
 });
 
-function renderError(error) {//renders the error to the div100 div
-  var object = document.createElement('p');
-  object.classList.add("alert");
-  object.classList.add("alert-danger");
-  object.textContent = error.message;
-  div100.append(object);
+function renderError(errorObj) {
+  let p = document.createElement('p');
+  let records = document.querySelector('#records');
+  p.classList.add('alert');
+  p.classList.add('alert-danger');
+  p.textContent = errorObj.message;
+  records.appendChild(p);
 }
 
     
@@ -137,16 +175,16 @@ function renderError(error) {//renders the error to the div100 div
 const state = { previewAudio: new Audio() };
 
 //Plays the given track, spinning the given image.
-function playTrackPreview(track, img) {
+function playTrackPreview(track) {
   if (state.previewAudio.src !== track.previewUrl) { //if a new track to play
     document.querySelectorAll('img').forEach(function (element) {
       element.classList.remove('fa-spin');
     }); //stop whoever else is spinning
     state.previewAudio.pause(); //pause current
     state.previewAudio = new Audio(track.previewUrl); //create new audio
-    state.previewAudio.controls = true;
+    state.previewAudio.controls;
     state.previewAudio.play(); //play new
-    img.classList.add('fa-spin'); //start the spinning
+    
   }
   else {
     if (state.previewAudio.paused) {
@@ -155,9 +193,9 @@ function playTrackPreview(track, img) {
     } else {
       state.previewAudio.pause();
     }
-    img.classList.toggle('fa-spin'); //toggle the spinning
   }
 }
+
 
 if(typeof module !== 'undefined' && module.exports){
   /* eslint-disable */
@@ -172,3 +210,4 @@ if(typeof module !== 'undefined' && module.exports){
     module.exports.toggleSpinner = toggleSpinner;
   module.exports.playTrackPreview = playTrackPreview;    
 }
+

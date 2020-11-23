@@ -73,3 +73,12 @@
     font-size: 20px;
     margin: 0 auto;
   }
+  #footerp{
+      font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      line-height: 12px;
+  
+  }
