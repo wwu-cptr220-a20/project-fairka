@@ -79,7 +79,10 @@ footer a{
 #social-links{
     display:none;
 }
-
+.Gyuser{
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    color:red;
+}
 h1 {
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     color:red;
@@ -168,8 +171,6 @@ h2 p{
     color: white;
     text-align: center;
 }
-
-
 h5 img{
     display: block;
     margin-left: auto;
@@ -379,4 +380,13 @@ footer p{
     .lists{
         font-size: .5rem;
    }
+}
+#footerp{
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 12px;
+
 }
