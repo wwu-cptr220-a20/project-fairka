@@ -335,6 +335,68 @@ footer p{
        line-height: 20px;
 }
 
+.cards2 {
+    justify-content: space-evenly;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.flip-card2 {
+    width: 350px;
+    height: 350px;
+    perspective: 700px;
+}
+  
+.flip-card-inner2 {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    /* text-align: center; */
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip-card2:hover .flip-card-inner2 {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front2, .flip-card-back2 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    backface-visibility: hidden;
+    opacity: .75;
+    border-radius: 10px;
+}
+  
+.flip-card-front2 {
+    background-color: black;
+}
+  
+.flip-card-front2 {
+    color: white;
+}
+  
+.flip-card-back2 {
+    background-color: rgba(58, 54, 54, 0.596); 
+    color: white;
+    transform: rotateY(180deg);
+}
+
+p.cardTitle2 {
+    padding: 70px 20px 100px 20px;
+    font-size: 200%;
+    text-align: center;
+}
+
+p.cardContent2 {
+    padding: 40px 20px 100px 20px;
+    margin-bottom: 80px;
+    font-size: 140%;
+}
+
+
 @media screen and (max-width: 598px){
     .topnav a:not(:first-child) {
        display: none;
