@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 #survey-form {
     font-family: 'Archivo Black', sans-serif;
     font-size: 18px;
@@ -18,13 +20,17 @@
     align-items: center;
     justify-content: center;
   }
-  img{
-    margin: 5px;
+  #GenreResults img{
+  margin: 5px;
   width: 150px;
   height: 150px;
   border-radius:50%;
   cursor: pointer; /* so looks clickable! */
   }
+  
+  h3{
+    align-content: center;
+}
   .age{
       position: relative;
       left:44%;
@@ -73,12 +79,49 @@
     font-size: 20px;
     margin: 0 auto;
   }
-  #footerp{
-      font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
-      font-size: 12px;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 400;
-      line-height: 12px;
+  .d-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: black;
+}
+
+.carousel {
+    margin-top: 5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
   
-  }
+.d-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+}
+  
+img:hover {
+    border: .2rem solid #aca6a3;
+}
+  
+.carousel-caption {
+    font-size: 90%;
+    margin-bottom: 0px;
+    padding: 1.6rem .5rem 0 .5rem;
+    height: 160px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    opacity: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.form-inline {
+    justify-content: center;
+    margin-top: 50px;
+}
+  
