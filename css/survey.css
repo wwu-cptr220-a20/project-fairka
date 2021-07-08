@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+#survey-form {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+  }
+  
+  @media (min-width: 560px) {
+    #cont {
+      max-width: 700px;
+  }
+  }
+  #GenreResults{
+    display: flex; /* flexbox for wrapping */
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+  #GenreResults img{
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius:50%;
+  cursor: pointer; /* so looks clickable! */
+  }
+  
+  h3{
+    align-content: center;
+}
+  .age{
+      position: relative;
+      left:44%;
+      align-content: center;
+      text-align: center;
+  }
+  #info-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .form-cntr {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .form-cntr1 {
+    border: 0px;
+    height: 15px;
+    width: 20px;
+  }
+  #inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  #inputGroup input {
+    margin: 0 45px 20px 0;
+  }
+  p {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  #button {
+    text-align: center;
+  }
+  #submit {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    width: 15%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .d-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: black;
+}
+
+.carousel {
+    margin-top: 5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.d-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+}
+  
+img:hover {
+    border: .2rem solid #aca6a3;
+}
+  
+.carousel-caption {
+    font-size: 90%;
+    margin-bottom: 0px;
+    padding: 1.6rem .5rem 0 .5rem;
+    height: 160px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    opacity: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.form-inline {
+    justify-content: center;
+    margin-top: 50px;
+}
+  

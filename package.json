@@ -9,7 +9,12 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "jest-style-matchers": "^0.1.2"
+    "jest-style-matchers": "^0.1.2",
+    "cheerio": "^1.0.0-rc.3",
+    "fetch-mock": "^9.10.7",
+    "jquery": "^3.5.1",
+    "md5": "^2.3.0",
+    "node-fetch": "^2.6.1"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -35,5 +40,10 @@
         "error"
       ]
     }
+  },
+  "dependencies": {
+    "billboard-top-100": "^2.5.9",
+    "grade-js": "^1.0.10",
+    "howler": "^2.2.1"
   }
 }
